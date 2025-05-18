@@ -64,7 +64,11 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.44f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Script\01. Obstacle dodge\04.InputGetAxis\Mover_04.cs" />
     <Compile Include="Assets\Script\01. Obstacle dodge\01. Start &amp; Update\Mover.cs" />
+    <Compile Include="Assets\Script\01. Obstacle dodge\02. Introducing variables\Mover_02.cs" />
+    <Compile Include="Assets\Script\01. Obstacle dodge\03. Serialize Field\Mover_03.cs" />
+    <Compile Include="Assets\Script\01. Obstacle dodge\05. Cinemachine\Mover_05.cs" />
     <Compile Include="Assets\TestDeleteMe.cs" />
   </ItemGroup>
   <ItemGroup>
