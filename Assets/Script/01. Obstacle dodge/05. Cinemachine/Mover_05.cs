@@ -4,7 +4,7 @@ using System.Diagnostics;
 using Unity.VisualScripting;
 using UnityEngine;
 
-
+// to add cinemachine, window -> package manager -> Packages: Unit Regsitry -> seach cinemachine
 public class Mover_05 : MonoBehaviour
 {
     [SerializeField] float speed = 10f;

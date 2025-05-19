@@ -66,10 +66,14 @@
   <ItemGroup>
     <Compile Include="Assets\Script\01. Obstacle dodge\04.InputGetAxis\Mover_04.cs" />
     <Compile Include="Assets\Script\01. Obstacle dodge\01. Start &amp; Update\Mover.cs" />
+    <Compile Include="Assets\Script\01. Obstacle dodge\06. Basic collision\Dropper.cs" />
+    <Compile Include="Assets\Script\01. Obstacle dodge\06. Basic collision\Scorer.cs" />
     <Compile Include="Assets\Script\01. Obstacle dodge\02. Introducing variables\Mover_02.cs" />
     <Compile Include="Assets\Script\01. Obstacle dodge\03. Serialize Field\Mover_03.cs" />
     <Compile Include="Assets\Script\01. Obstacle dodge\05. Cinemachine\Mover_05.cs" />
     <Compile Include="Assets\TestDeleteMe.cs" />
+    <Compile Include="Assets\Script\01. Obstacle dodge\06. Basic collision\Mover_06.cs" />
+    <Compile Include="Assets\Script\01. Obstacle dodge\06. Basic collision\ObjectHit.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -920,6 +924,10 @@
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.Performance.Profile-Analyzer.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll</HintPath>
       <Private>False</Private>
@@ -982,6 +990,10 @@
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>Library\ScriptAssemblies\Cinemachine.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.VisualScripting.Flow">
