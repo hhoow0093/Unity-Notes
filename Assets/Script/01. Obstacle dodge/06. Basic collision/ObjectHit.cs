@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ObjectHit : MonoBehaviour
 {
-    Color[] colors = { Color.red, Color.blue, Color.green, Color.black};
+    // Color[] colors = { Color.red, Color.blue, Color.green, Color.black};
 
     // Start is called before the first frame update
     void Start()
@@ -18,12 +18,19 @@ public class ObjectHit : MonoBehaviour
 
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter(Collision other)
     {
         // Debug.Log($"you hit an object!: {gameObject.name}");
         // get the gameobject renderer and change its matrial color
-        MeshRenderer rend = gameObject.GetComponent<MeshRenderer>();
-        rend.material.color = colors[Random.Range(0, colors.Length)];
+
+        // do not change color unless object hit is player
+        if (other.gameObject.tag == "Player")
+        {
+            MeshRenderer rend = gameObject.GetComponent<MeshRenderer>();
+            rend.material.color = Color.black;
+
+
+        }
     }
 
 }

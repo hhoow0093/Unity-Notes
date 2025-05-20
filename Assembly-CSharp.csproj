@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="Assets\Script\01. Obstacle dodge\04.InputGetAxis\Mover_04.cs" />
     <Compile Include="Assets\Script\01. Obstacle dodge\01. Start &amp; Update\Mover.cs" />
+    <Compile Include="Assets\Script\01. Obstacle dodge\06. Basic collision\Flyto.cs" />
     <Compile Include="Assets\Script\01. Obstacle dodge\06. Basic collision\Dropper.cs" />
     <Compile Include="Assets\Script\01. Obstacle dodge\06. Basic collision\Scorer.cs" />
     <Compile Include="Assets\Script\01. Obstacle dodge\02. Introducing variables\Mover_02.cs" />
@@ -74,6 +75,7 @@
     <Compile Include="Assets\TestDeleteMe.cs" />
     <Compile Include="Assets\Script\01. Obstacle dodge\06. Basic collision\Mover_06.cs" />
     <Compile Include="Assets\Script\01. Obstacle dodge\06. Basic collision\ObjectHit.cs" />
+    <Compile Include="Assets\Script\01. Obstacle dodge\06. Basic collision\Spinner.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

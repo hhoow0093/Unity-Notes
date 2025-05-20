@@ -4,38 +4,72 @@ using UnityEngine;
 
 public class Dropper : MonoBehaviour
 {
-    // Start is called before the first frame update
+
     float timer = 0f;
-    [SerializeField] float maxtimer = 3f;
-    // float timerRate = 0.1f;
+    [SerializeField] float timeToWait = 3f;
+    MeshRenderer myRenderer;
+    Rigidbody myRigidBody;
+
     void Start()
     {
+        myRenderer = gameObject.GetComponent<MeshRenderer>();
+        myRigidBody = gameObject.GetComponent<Rigidbody>();
+
+        myRenderer.enabled = false;
+        myRigidBody.useGravity = false;
 
     }
 
-    // Update is called once per frame
     void Update()
     {
         timer = Time.time;
-        if (timer <= maxtimer)
-        {
-            Debug.Log($"time elapsed: {Time.time}");
-            
-        }
-
-        if (timer >= maxtimer)
+        if (timer >= timeToWait)
         {
             dropItems();
         }
+
     }
 
     void dropItems()
     {
-        if (gameObject.GetComponent<Rigidbody>() != null)
+        if (myRenderer.enabled == true && myRigidBody.useGravity == true)
         {
             return;
         }
-        gameObject.AddComponent<Rigidbody>();
+        else
+        {
+            myRenderer.enabled = true;
+            myRigidBody.useGravity = true;
+        }
     }
+
+
     
 }
+
+// float timer = 0f;
+// [SerializeField] float maxtimer = 3f;
+
+// void dropItems()
+// {
+//     if (gameObject.GetComponent<Rigidbody>() != null)
+//     {
+//         return;
+//     }
+//     gameObject.AddComponent<Rigidbody>();
+// }
+
+// void Update()
+// {
+//     timer = Time.time;
+//     if (timer <= maxtimer)
+//     {
+//         Debug.Log($"time elapsed: {Time.time}");
+        
+//     }
+
+//     if (timer >= maxtimer)
+//     {
+//         dropItems();
+//     }
+// }

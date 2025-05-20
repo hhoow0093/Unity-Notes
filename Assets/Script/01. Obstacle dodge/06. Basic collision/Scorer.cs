@@ -17,10 +17,19 @@ public class Scorer : MonoBehaviour
 
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter(Collision other)
     {
-        Debug.Log($"Score: {score}");
-        score++;
+        // assigning othe gameObject to hit if player hasnt hit the item (tags)
+        if (other.gameObject.tag == "hit")
+        {
+            return;
+        }
+        else
+        {
+            other.gameObject.tag = "hit";
+            Debug.Log($"Score: {score}");
+            score++;
+        }
         
     }
 }
