@@ -75,6 +75,7 @@
     <Compile Include="Assets\TestDeleteMe.cs" />
     <Compile Include="Assets\Script\01. Obstacle dodge\06. Basic collision\Mover_06.cs" />
     <Compile Include="Assets\Script\01. Obstacle dodge\06. Basic collision\ObjectHit.cs" />
+    <Compile Include="Assets\Script\01. Obstacle dodge\06. Basic collision\TriggerProjectile.cs" />
     <Compile Include="Assets\Script\01. Obstacle dodge\06. Basic collision\Spinner.cs" />
   </ItemGroup>
   <ItemGroup>
