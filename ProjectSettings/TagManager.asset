@@ -4,7 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - goal
+  - hazard
   - hit
+  - coin
+  - Floor
   layers:
   - Default
   - TransparentFX

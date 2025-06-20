@@ -22,14 +22,11 @@ public class ObjectHit : MonoBehaviour
     {
         // Debug.Log($"you hit an object!: {gameObject.name}");
         // get the gameobject renderer and change its matrial color
-
         // do not change color unless object hit is player
         if (other.gameObject.tag == "Player")
         {
             MeshRenderer rend = gameObject.GetComponent<MeshRenderer>();
             rend.material.color = Color.black;
-
-
         }
     }
 

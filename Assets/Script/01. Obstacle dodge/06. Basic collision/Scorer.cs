@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+using System;
 
 public class Scorer : MonoBehaviour
 {
+    [SerializeField] TMP_Text myScorer;
     int score = 0;
     // Start is called before the first frame update
     void Start()
@@ -19,16 +23,23 @@ public class Scorer : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
-        // assigning othe gameObject to hit if player hasnt hit the item (tags)
         if (other.gameObject.tag == "hit")
         {
             return;
         }
-        else
+        else if (other.gameObject.tag == "hazard")
         {
             other.gameObject.tag = "hit";
-            Debug.Log($"Score: {score}");
+            score--;
+            myScorer.text = string.Format("{0:0}", score);
+            return;
+        }
+        else if (other.gameObject.tag == "coin")
+        {
             score++;
+            other.gameObject.SetActive(false);
+            myScorer.text = string.Format("{0:0}", score);
+            return;
         }
         
     }
